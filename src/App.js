@@ -30,11 +30,13 @@ const App=(props)=>{
         <Topbar/>
         
         <Switch>
+        <Route path="/" exact component={Home}/>
           <Route path="/accessories"/>
           <Route path="/clothing"/>
+          <Route path="/" exact component={Home}/>
           <Route path="/checkout" exact component={Checkout}/>
           <Route path="/PlaceOrder" exact component={PlaceOrder}/>
-          <Route path="/" exact component={Home}/>
+         
           <Route path="/product/:id" component={ProductDetails}/>
         </Switch>
         {/* <DemoCarousel/>
