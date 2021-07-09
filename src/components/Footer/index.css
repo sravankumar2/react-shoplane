@@ -61,5 +61,14 @@ footer ul li h3 {
 
 .link-item:hover {
     text-decoration: none;
-    color: #8eb406 !important
+    color: #ccc !important
+}
+@media screen and (max-width:786px){
+    footer{
+        flex-wrap: wrap;
+    }
+    footer ul{
+       width: 40%;      
+    
+    } 
 }

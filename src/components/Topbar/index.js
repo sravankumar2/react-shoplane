@@ -2,17 +2,18 @@ import React from 'react';
 import "./index.css"
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import avatar from "./Avatar.png"
 const Topbar=({cart})=>{
     return(
         <div id="top-bar">
             <div className="left-menu">
                 <div id="logo">
-                    <Link to="/"><span>SHOP</span>lane</Link> 
+                    <Link to="/react-shoplane"><span>SHOP</span>lane</Link> 
                 </div>
-                 <Link to="/">Home</Link>    
+                 <Link to="/react-shoplane">Home</Link>    
      
-                  <Link to="/clothing" >Clothing</Link>
-                  <Link to="/accessories">Accessories</Link>
+                  <Link to="/react-shoplane">Clothing</Link>
+                  <Link to="/react-shoplane">Accessories</Link>
             </div>
             <div className="middle-menu">
                     <i className="fas fa-search" aria-hidden="true"></i>
@@ -25,7 +26,7 @@ const Topbar=({cart})=>{
                             <i className="fas fa-shopping-cart" aria-hidden="true"></i>
                         </Link>
                     </div>
-                    <img src={"./images/corona.jpg"} alt="corona"/>
+                    <img src={avatar} alt="avatar"/>
             </div>
             
         </div>

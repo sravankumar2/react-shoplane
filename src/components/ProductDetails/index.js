@@ -11,7 +11,8 @@ const ProductDetails = (props) => {
     const [ProductDetails,setProductDetails]=useState([])
     const { id } = useParams();
     const [previewClicked,setPreviewClicked]=useState(0);
-    // const [previewImage,setPreviewImage]=useState("")
+    const [isLoading,setIsLoading]=useState(false);
+    
     const{
         name="",        
         photos=[],
@@ -32,12 +33,13 @@ const ProductDetails = (props) => {
         .then(res=>{
            
             setProductDetails(res.data);
+            setIsLoading(true)
         });
            
     },[id])
   
    
-    return ( <div id="product">    
+    return ( isLoading?<div id="product">    
     <div className="left-column">
       <img id="productImg" src={photos[previewClicked]} alt="previewImg"/>
     </div>
@@ -78,11 +80,10 @@ const ProductDetails = (props) => {
         </div>
     </div> 
 
-    </div> )
+    </div> :<div style={{padding:"90px 50px"}}><h1>Loading.....</h1></div>)
 }
 const mapStateToProps = (state) => ({
   productList: state.productList,
-  productById: state.productById,
   cart: state.cart,
 });
 

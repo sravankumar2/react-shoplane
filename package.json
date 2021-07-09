@@ -1,5 +1,5 @@
 {
-  "homepage": "http://sravankumar2.github.io/shoplane",
+  "homepage": "http://sravankumar2.github.io/react-shoplane",
   "name": "react-shoplane",
   "version": "0.1.0",
   "private": true,
@@ -15,6 +15,7 @@
     "react-responsive-carousel": "^3.2.19",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "responsive-carousel": "^1.5.8",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

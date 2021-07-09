@@ -96,3 +96,17 @@
  .bigger {
      transform: scale(1.1, 1.1);
  }
+ @media screen and (max-width:786px){
+    #product{
+      flex-direction:column;    
+    }
+    .left-column{
+       width:100%
+    }
+    .right-column{
+      width:100%;
+    }
+    .product-description h1{
+        font-size: 12px;
+    }
+  }

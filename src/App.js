@@ -1,8 +1,6 @@
 import { BrowserRouter, Switch, Route, } from 'react-router-dom';
 import React, { useEffect } from 'react';
 import './App.css';
-import AnimatedIcons from './components/AnimatedFeatur';
-import DemoCarousel from './components/Slider';
 import Topbar from './components/Topbar';
 import Home from './components/Home';
 import ProductDetails from './components/ProductDetails';
@@ -14,30 +12,29 @@ import Checkout from './components/CheckOut';
 import Footer from './components/Footer';
 import PlaceOrder from './components/PlaceOrder';
 const App=(props)=>{
-
+ 
   const getProductsData = () => {
     axios.get(ApiData).then((response) => {
       props.updateProductList(response.data)
     })
   }
   useEffect(() => {
-    getProductsData()
-  }, [])
+    getProductsData();  
+
+  },[])
 
   return (
     <div className="App">
       <BrowserRouter>
-        <Topbar/>
-        
-        <Switch>
-        <Route path="/" exact component={Home}/>
-          <Route path="/accessories"/>
-          <Route path="/clothing"/>
-          <Route path="/" exact component={Home}/>
+        <Topbar/>  
+          
+        <Switch>       
+             
+          <Route path="/react-shoplane" exact><Home/></Route>
           <Route path="/checkout" exact component={Checkout}/>
-          <Route path="/PlaceOrder" exact component={PlaceOrder}/>
-         
+          <Route path="/PlaceOrder" exact component={PlaceOrder}/>         
           <Route path="/product/:id" component={ProductDetails}/>
+          <Route path="*"><h1 style={{ padding: "100px 50px" }}>Error 404 Page</h1></Route>
         </Switch>
         {/* <DemoCarousel/>
         <AnimatedIcons/> */}

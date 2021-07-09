@@ -1,12 +1,4 @@
-.clothing-card{    
-    padding: 4% 8% 0;
-}
-.product-grid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    
-}
+
 .product-card {
     width: 200px;
     /* min-width: 19%; */

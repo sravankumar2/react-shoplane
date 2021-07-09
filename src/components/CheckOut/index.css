@@ -8,26 +8,50 @@
 
 .left-section {
     width: 45%;
+    
 }
 
 .checkout-card-wrapper {
     display: flex;
     box-sizing: border-box;
+ 
     box-shadow: 0 2px 5px #ccc;
     border-radius: 5px;
     background-color: white;
-    max-width: 600px;
+    max-width: 800px;
     padding: 16px;
     margin-bottom: 16px;
     margin-right: 16px;
     max-height: 140px;
+    position: relative;
 }
+.alteration{
+    display: flex;
+    padding: 5px;
+   margin-top: auto;
+   margin-bottom: auto;
+   
+}
+.alteration span{
+    padding: 5px;
+}
+/* .btn-remove{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0;
+    background-color: lightcoral;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    
+} */
 
 .checkout-card-image {
     width: 80px;
     min-width: 80px;
     border-radius: 5px;
-    margin-right: 16px;
+    margin-right: 8px;
 }
 
 .checkout-card-header,
@@ -92,4 +116,21 @@
     color: white;
     text-decoration: none;
     background-color: #00b09e
+}
+@media screen and (max-width:800px){
+    .content-wrapper{
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+    }
+    .content-wrapper > div:first-of-type{
+        width: 100%;
+    
+    }
+    .content-wrapper > div:last-of-type{
+        width: 100%;
+        margin-left: 0;
+        padding-left: 0;
+    }
+    
 }
