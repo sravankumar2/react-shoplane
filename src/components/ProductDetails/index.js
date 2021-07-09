@@ -69,6 +69,7 @@ const ProductDetails = (props) => {
               );
               if (indexOfNewProduct === -1) {
                   cartItem.push(ProductDetails);
+                  console.log(ProductDetails)
                   ProductDetails.quantity = 1;
                   props.addProductToCart(cartItem);
               } else {

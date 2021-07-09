@@ -31,8 +31,8 @@ const Checkout = (props) => {
         }
     }
     const removeFromCart=(id)=>{
-       const popItem=cart.filter((prod) => prod.id === id)
-        cart.pop(popItem)
+       const popItem=cart.findIndex((prod) => prod.id === id)
+        cart.splice(popItem,1)
         props.removeFromCartItems(cart)
     }
    const totalAmount = cart.length > 0 ? cart.map(prod => prod.quantity * prod.price).reduce((total, value) => total + value) : 0;
@@ -52,12 +52,12 @@ const Checkout = (props) => {
                         </div>
                      <div className="alteration">                    
                         {/* <p onClick={()=>decreaseQuantity(item.id)}>decre</p> */}
-                        <span><i onClick={()=>decreaseQuantity(item.id)} class="far fa-minus-square"></i></span>
+                        <span><i onClick={()=>decreaseQuantity(item.id)} className="far fa-minus-square"></i></span>
                         <span> {item.quantity} </span>
                         {/* <p onClick={()=>increaseQuantity(item.id)}>incre</p> */}
-                       <span><i onClick={()=>increaseQuantity(item.id)} class="far fa-plus-square"></i></span>
+                       <span><i onClick={()=>increaseQuantity(item.id)} className="far fa-plus-square"></i></span>
                     </div>
-                    <i onClick={()=>removeFromCart(item.id)} className="fas fa-times-circle"></i>
+                   <span><i onClick={()=>removeFromCart(item.id)} className="fas fa-times-circle"></i></span> 
                     {/* <button className="btn-remove" onClick={()=>removeFromCart(item.id)}>Remove</button>   */}
                 </div>                 
                 )}                           
